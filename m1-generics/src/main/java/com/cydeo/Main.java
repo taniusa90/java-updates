@@ -15,6 +15,15 @@ public class Main {
 //      items.add("Apple");
         printDoubled(items);
 
+        System.out.println("--------------");
+        FootballPlayer joe = new FootballPlayer("Joe");
+        BaseballPlayer pat = new BaseballPlayer("Pat");
+        SoccerPlayer beckham = new SoccerPlayer("Beckham");
+        Team<SoccerPlayer> liverpool = new Team<>("Liverpool");//Team accepting any object
+        //liverpool.addPlayer(joe);
+        //liverpool.addPlayer(pat);
+        liverpool.addPlayer(beckham);
+
 
 
     }
