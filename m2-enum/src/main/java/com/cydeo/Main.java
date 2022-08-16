@@ -36,6 +36,12 @@ public class Main {
         System.out.println("Operation Task");
         calculate(2,2,Operation.PLUS);
 
+        System.out.println("-----------------------");
+
+        System.out.println("How to retrieve the constant value");
+        System.out.println(Currency.PENNY.getValue());
+        System.out.println(Currency.PENNY.ordinal());//0 index
+
 
     }
 

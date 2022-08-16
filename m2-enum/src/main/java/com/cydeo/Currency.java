@@ -13,4 +13,5 @@ public enum Currency {  //special class that hold only constants
     public int getValue() {
         return value;
     }
+
 }
