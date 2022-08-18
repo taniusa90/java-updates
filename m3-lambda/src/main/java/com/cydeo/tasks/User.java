@@ -8,9 +8,6 @@ import lombok.*;
 @Setter
 @ToString
 
-
-
-
 public class User {
 
     private String firstName;
