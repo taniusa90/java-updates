@@ -2,10 +2,10 @@ package com.cydeo;
 
 import com.cydeo.task.Dish;
 import com.cydeo.task.DishData;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 public class Reducing {
 
@@ -39,6 +39,27 @@ public class Reducing {
         System.out.println("Min:" + min.get());
         System.out.println("Max:" + max.get());
         System.out.println("Sum:" + sum.get());
+
+        //COUNT
+        long dishCount=DishData.getAll().stream().count();
+        System.out.println(dishCount);//9 object of Dish
+
+        Stream.iterate(0,n->n+2)
+                .limit(5)
+                .forEach(System.out::println);
+        Stream.iterate(new int[]{0,1},n->new int[]{n[1], n[0] + n[1]})
+                .limit(20)
+                .forEach(t -> System.out.println("("+t[0]+","+t[1]+")"));
+
+        System.out.println("--------------------");
+
+        Stream.iterate(0,n->n+1)
+                .limit(10)
+                .forEach(System.out::println);//0-9
+
+
+
+
 
 
     }

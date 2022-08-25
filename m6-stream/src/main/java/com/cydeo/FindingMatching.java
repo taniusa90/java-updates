@@ -32,7 +32,6 @@ public class FindingMatching {
         System.out.println(dish.get());//will return random vegetarian dish, but all time will return first
 
         System.out.println("*******FIND FIRST********");
-
         Optional<Dish>dish2=DishData.getAll().stream().filter(Dish::isVegetarian).findFirst();
         System.out.println(dish2.get());
 
@@ -52,10 +51,13 @@ public class FindingMatching {
 
         System.out.println("*******MIN AND MAX********");
 
-        Optional<Dish>dishMin=DishData.getAll().stream().min(Comparator.comparing(Dish::getCalories));
-        System.out.println(dishMin.get());
-        Optional<Dish>dishMax=DishData.getAll().stream().max(Comparator.comparing(Dish::getCalories));
-        System.out.println(dishMax.get());
+        Optional<Dish> dMin = DishData.getAll().stream().min(Comparator.comparing(Dish::getCalories));
+        System.out.println(dMin.get());
+
+        System.out.println("Max");
+        Optional<Dish> dMax = DishData.getAll().stream().max(Comparator.comparing(Dish::getCalories));
+        System.out.println(dMax);
+
 
 
 
